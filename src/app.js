@@ -26,18 +26,17 @@ try {
 var formation = [4, 4, 3];
 
 //write your function here
-function createFormation(formation){
+function createFormation(formation) {
 
-  if(formation.length==0)
-  {
-  return null;
+  if (formation.length == 0) {
+    return null;
   }
   var play =
   {
-    defender:formation[0],
+    defender: formation[0],
     midfield: formation[1],
     forward: formation[2]
-}
+  }
   return play;
 
 }
@@ -78,17 +77,15 @@ function filterByAward(awardName) {
 //Progression 6 - Filter players that won ______ award ____ times
 function filterByAwardxTimes(awardName, noOfTimes) {
   let arr = [];
-  let count = 0,m=0;
+  let count = 0, m = 0;
   let j;
-  for (let i = 0; i < players.length; i++)
-    {
-      for (j = 0; j < players[i].awards.length; j++) {
-        if (players[i].awards[j].name == awardName) {
-            count++;       
-        }
+  for (let i = 0; i < players.length; i++) {
+    for (j = 0; j < players[i].awards.length; j++) {
+      if (players[i].awards[j].name == awardName) {
+        count++;
       }
-    if (count == noOfTimes)
-    {
+    }
+    if (count == noOfTimes) {
       arr.push(players[i]);
     }
     count = 0;
